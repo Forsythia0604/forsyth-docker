@@ -1,0 +1,12 @@
+.DS_Store
+.build/
+.verification/
+xcuserdata/
+*.xcuserstate
+*.mobileprovision
+*.provisionprofile
+*.p12
+*.pfx
+*.p8
+.env
+.env.*

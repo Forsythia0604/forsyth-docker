@@ -1,0 +1,113 @@
+name: Docker
+options:
+  deploymentTarget:
+    macOS: "26.0"
+  createIntermediateGroups: true
+  developmentLanguage: zh-Hans
+configs:
+  Debug: debug
+  Release: release
+settings:
+  base:
+    SDKROOT: macosx
+    SWIFT_VERSION: "5.0"
+    CODE_SIGN_IDENTITY: "-"
+    CODE_SIGN_STYLE: Manual
+    DEVELOPMENT_TEAM: ""
+    ENABLE_HARDENED_RUNTIME: NO
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    SWIFT_STRICT_CONCURRENCY: minimal
+    CLANG_ENABLE_MODULES: YES
+    MACOSX_DEPLOYMENT_TARGET: "26.0"
+targets:
+  Docker:
+    type: application
+    platform: macOS
+    sources:
+      - path: ../Dock
+      - path: ../Shared
+      - path: ../ThirdParty/DockLockCore
+      - path: ../Resources/Docker.icns
+        buildPhase: resources
+      - path: ThirdPartyNotices.txt
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(FORSYTH_MAIN_BUNDLE_ID)
+        INFOPLIST_FILE: $(FORSYTH_INPUT_DIR)/MainInfo.plist
+        GENERATE_INFOPLIST_FILE: NO
+        ENABLE_APP_SANDBOX: NO
+        PRODUCT_NAME: Docker
+    dependencies:
+      - target: DockerControlHost
+        embed: false
+        link: false
+      - target: DockerWatchdog
+        link: false
+        embed: false
+    postBuildScripts:
+      - path: embed-engines.sh
+        name: Preserve signed engines and window helper
+        basedOnDependencyAnalysis: false
+  DockerControlHost:
+    type: application
+    platform: macOS
+    sources:
+      - path: ../Controls/QuitControlHost.swift
+      - path: ../Controls/QuitControlIntent.swift
+      - path: ../Dock/Configuration.swift
+      - path: ../Dock/DockerStore.swift
+      - path: ../Dock/QuitService.swift
+      - path: ../Dock/QuitSessionLease.swift
+      - path: ../Resources/Docker.icns
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(FORSYTH_CONTROL_HOST_BUNDLE_ID)
+        INFOPLIST_FILE: $(FORSYTH_INPUT_DIR)/ControlHostInfo.plist
+        GENERATE_INFOPLIST_FILE: NO
+        ENABLE_APP_SANDBOX: NO
+        SKIP_INSTALL: YES
+        PRODUCT_NAME: DockerControlHost
+    dependencies:
+      - target: DockerControls
+        embed: true
+        codeSign: true
+  DockerControls:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: ../Controls/DockerQuitControl.swift
+      - path: ../Controls/QuitControlIntent.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(FORSYTH_CONTROLS_BUNDLE_ID)
+        INFOPLIST_FILE: $(FORSYTH_INPUT_DIR)/ControlsInfo.plist
+        GENERATE_INFOPLIST_FILE: NO
+        CODE_SIGN_ENTITLEMENTS: ../Controls/Entitlements.plist
+        ENABLE_APP_SANDBOX: YES
+        APPLICATION_EXTENSION_API_ONLY: YES
+        SKIP_INSTALL: YES
+        OTHER_LDFLAGS: $(inherited) -e _NSExtensionMain
+        PRODUCT_NAME: DockerControls
+  DockerWatchdog:
+    type: tool
+    platform: macOS
+    sources:
+      - path: ../Watchdog
+      - path: ../Shared/NativeDockSession.swift
+      - path: ../ThirdParty/DockLockCore
+    settings:
+      base:
+        PRODUCT_NAME: DockerWatchdog
+        GENERATE_INFOPLIST_FILE: NO
+        SKIP_INSTALL: YES
+schemes:
+  Docker:
+    build:
+      targets:
+        Docker: all
+    run:
+      config: Release
+    archive:
+      config: Release

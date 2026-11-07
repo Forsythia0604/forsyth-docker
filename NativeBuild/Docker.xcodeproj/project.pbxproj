@@ -1,0 +1,868 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		007A28F79FF24E5F3ABB469C /* QuitControlIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E526A00622211EC99FB43676 /* QuitControlIntent.swift */; };
+		018EA3B17FD0B4F05F6C6F9E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA7D17FB7FBED14F8C85AF /* Configuration.swift */; };
+		087CC6E40DF53AB620E4AF05 /* MenuCopyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178B3A6BD3B31AE33565F45 /* MenuCopyPage.swift */; };
+		0F8C8D532D331ABA261226E4 /* Docker.icns in Resources */ = {isa = PBXBuildFile; fileRef = BDF17A8AE6C833CF10DB9767 /* Docker.icns */; };
+		10619CE4468156B99A9D4906 /* TrashService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7F00DA338790642FB833A /* TrashService.swift */; };
+		142F9973AD0AF7F8824495B0 /* QuitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F1B407C91655320C895A80 /* QuitService.swift */; };
+		155A51F91C6B38293640412E /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AF357BD8E4F9878AFC8D87 /* Preview.swift */; };
+		171F59F9DD4626F09E7797B0 /* WindowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C96CFD6A8F25C600709B2AE /* WindowProtocol.swift */; };
+		1EF8C68361354EBDC334B804 /* DockResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A673E9E952EF0548B3822CCE /* DockResize.swift */; };
+		20E3D19106006BF8D142175C /* QuitSessionLease.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26707FAFADB1AA6E62F3622 /* QuitSessionLease.swift */; };
+		20EA5CAE616747458F9712E3 /* DockWindowBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC142B989AB2529E0E4B200A /* DockWindowBridge.swift */; };
+		24FAEBF592B7D23880526F36 /* StatusReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BBEE707603CB06E825065 /* StatusReport.swift */; };
+		2CE2BD17E996B9CFD267AC9F /* NativeDockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9B52858FB37CDAB0542C5 /* NativeDockSession.swift */; };
+		2FDFCBAF6961CF4EC76F86F9 /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902F2A1CFF8C8B6CB432B531 /* Basics.swift */; };
+		30BE696E78DD7AFAF12C5457 /* CopiedApplicationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D6A8402EBA77A81C99AE58 /* CopiedApplicationMenu.swift */; };
+		329DEA96AF90DDA2D881733C /* StatusReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8BBEE707603CB06E825065 /* StatusReport.swift */; };
+		32BFFB66CAD2DC2472C3F2E8 /* Applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EAD9FB8C058B3123260271 /* Applications.swift */; };
+		3B4CB01ADF26728409CE697A /* DisplayLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAD9EA93AB968D7E50A7172 /* DisplayLayout.swift */; };
+		4197A8CFF5CEF73586DE63F6 /* DisplayLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAD9EA93AB968D7E50A7172 /* DisplayLayout.swift */; };
+		476BFB9FC4999DD7B3A46B8E /* DockerQuitControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B136A84575CE3C986E5B516B /* DockerQuitControl.swift */; };
+		4EAD641D214886BA4F933385 /* MenuCopyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3B812DAA1AF255FDDDBD81 /* MenuCopyService.swift */; };
+		54C2BA641AA5A3BB562F713A /* DockBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D318A723232C30256219195E /* DockBadgeView.swift */; };
+		55BCE7D546F5259B6E42DB33 /* DockNotificationBadges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968E16EAB332BAE31D0F9604 /* DockNotificationBadges.swift */; };
+		5724D9491029C621CCB92C20 /* NativeDockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9B52858FB37CDAB0542C5 /* NativeDockSession.swift */; };
+		69130D8CED6D1A26A236674B /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9816DBCDF50051B915836AFD /* Stacks.swift */; };
+		6C2F09B06AFF7DEFCB359402 /* DockWindowShortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD3641377B7D02761A32358 /* DockWindowShortcut.swift */; };
+		6D21C81D9E2AFECACFC00798 /* ThirdPartyNotices.txt in Resources */ = {isa = PBXBuildFile; fileRef = F3160220CB3D994F941D2174 /* ThirdPartyNotices.txt */; };
+		6E219C25968512FC4DFC7A6D /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E45EB0BD692230D1E2AFA /* Commands.swift */; };
+		6FB367DA5D4B5F26F6C1741F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BA7B8438FEF4B20A6D1AC /* Settings.swift */; };
+		70EC7AF8A1539A2844D7E65C /* Watchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07218FACCBBAA3AB28897D0 /* Watchdog.swift */; };
+		712D58C0F4BBED94D83FFC50 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EA7D17FB7FBED14F8C85AF /* Configuration.swift */; };
+		71461828D8C557B7CB1AECAE /* DockerControls.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6AE5FBA8425236A21355AA76 /* DockerControls.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		77986A6C92CE0AB84F7A1684 /* NativeApplicationLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F11CB8F228322514D8AB599 /* NativeApplicationLibrary.swift */; };
+		807D0F21FB9929FD9A183A01 /* QuitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F1B407C91655320C895A80 /* QuitService.swift */; };
+		85EF8007190478780FFB87C9 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77E45EB0BD692230D1E2AFA /* Commands.swift */; };
+		8E1DBA0F3C611F1EA6E2B0BE /* DockContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597218F16136360E734E576E /* DockContextMenu.swift */; };
+		933BAAE3B06DDACC855AC3B9 /* StackListEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AD752A77E56227FCD38A8E /* StackListEditor.swift */; };
+		A2ADB5AD46C76125FC8BE9B7 /* Docker.icns in Resources */ = {isa = PBXBuildFile; fileRef = BDF17A8AE6C833CF10DB9767 /* Docker.icns */; };
+		B0CD693E728DAD69FCE17B40 /* NativeDockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CC7B326D198E9034425E44 /* NativeDockService.swift */; };
+		C1E2577D85F1C7C5F6C7D919 /* DockerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7309D979A0899B37E8D3F /* DockerStore.swift */; };
+		D04B356DE9439AAEC076C134 /* QuitControlIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E526A00622211EC99FB43676 /* QuitControlIntent.swift */; };
+		D1C4AACE2EE556E4F787A306 /* DirectoryEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6BEFB66325078EC2BD4DA8 /* DirectoryEvents.swift */; };
+		D859344AFC1463FD143B9368 /* DockerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B854C630D5D6A0EE95B0DE /* DockerMain.swift */; };
+		DA60BA2C0BC816EB866EA822 /* DockerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140B83BFDEB3705337BCAF14 /* DockerUI.swift */; };
+		DDBBDFD29199F33F873BC723 /* WindowIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B4084501A00ED3D0072A22 /* WindowIntent.swift */; };
+		DEB3D165D00C1463CA89C9CD /* QuitControlHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93779EF60F496AFF6C4FD30A /* QuitControlHost.swift */; };
+		E509749B9143CE353A68C759 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5BA7B8438FEF4B20A6D1AC /* Settings.swift */; };
+		E81C125C817EF1C63BD28FCB /* DockerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E7309D979A0899B37E8D3F /* DockerStore.swift */; };
+		EB9F101B562801FDD30CE5DE /* NativeQuitControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11F134694642251A50F614D /* NativeQuitControl.swift */; };
+		F29700F50740AC1723AF2CFD /* TrashState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6219F35194CBFC11E0833799 /* TrashState.swift */; };
+		F54AF71524F7EA5D014A6CAC /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902F2A1CFF8C8B6CB432B531 /* Basics.swift */; };
+		FF5C5BEE339F57FE08599BA2 /* QuitSessionLease.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26707FAFADB1AA6E62F3622 /* QuitSessionLease.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EDCD42AEFC20A8A113F219C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 176FA95F3474B99102AEDA81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3DFEE2700789BCB6E194534;
+			remoteInfo = DockerControls;
+		};
+		6D093D64A8D506099E0AF331 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 176FA95F3474B99102AEDA81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6550F3EF538B7E42721D7E79;
+			remoteInfo = DockerWatchdog;
+		};
+		76178320120B193751527D51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 176FA95F3474B99102AEDA81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F45599C8282B8559C2A354D;
+			remoteInfo = DockerControlHost;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		286D080DB4D21697307C15B4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				71461828D8C557B7CB1AECAE /* DockerControls.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0BAD9EA93AB968D7E50A7172 /* DisplayLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayLayout.swift; sourceTree = "<group>"; };
+		0FD3641377B7D02761A32358 /* DockWindowShortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockWindowShortcut.swift; sourceTree = "<group>"; };
+		13F1B407C91655320C895A80 /* QuitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitService.swift; sourceTree = "<group>"; };
+		140B83BFDEB3705337BCAF14 /* DockerUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockerUI.swift; sourceTree = "<group>"; };
+		2DD2B870637A67043EB67204 /* DockerControlHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DockerControlHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E6BEFB66325078EC2BD4DA8 /* DirectoryEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryEvents.swift; sourceTree = "<group>"; };
+		43AF357BD8E4F9878AFC8D87 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		4FB9B52858FB37CDAB0542C5 /* NativeDockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeDockSession.swift; sourceTree = "<group>"; };
+		597218F16136360E734E576E /* DockContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockContextMenu.swift; sourceTree = "<group>"; };
+		5C3B812DAA1AF255FDDDBD81 /* MenuCopyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCopyService.swift; sourceTree = "<group>"; };
+		60DC66C4A956756E751A5F24 /* DockerWatchdog */ = {isa = PBXFileReference; includeInIndex = 0; path = DockerWatchdog; sourceTree = BUILT_PRODUCTS_DIR; };
+		61CC7B326D198E9034425E44 /* NativeDockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeDockService.swift; sourceTree = "<group>"; };
+		620A2E31ED3D6A2F25B0B501 /* Docker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Docker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6219F35194CBFC11E0833799 /* TrashState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashState.swift; sourceTree = "<group>"; };
+		6AE5FBA8425236A21355AA76 /* DockerControls.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DockerControls.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C96CFD6A8F25C600709B2AE /* WindowProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowProtocol.swift; sourceTree = "<group>"; };
+		7178B3A6BD3B31AE33565F45 /* MenuCopyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCopyPage.swift; sourceTree = "<group>"; };
+		73D7F00DA338790642FB833A /* TrashService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashService.swift; sourceTree = "<group>"; };
+		77D6A8402EBA77A81C99AE58 /* CopiedApplicationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiedApplicationMenu.swift; sourceTree = "<group>"; };
+		80B4084501A00ED3D0072A22 /* WindowIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowIntent.swift; sourceTree = "<group>"; };
+		902F2A1CFF8C8B6CB432B531 /* Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
+		93779EF60F496AFF6C4FD30A /* QuitControlHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitControlHost.swift; sourceTree = "<group>"; };
+		968E16EAB332BAE31D0F9604 /* DockNotificationBadges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockNotificationBadges.swift; sourceTree = "<group>"; };
+		9816DBCDF50051B915836AFD /* Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
+		9B8BBEE707603CB06E825065 /* StatusReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusReport.swift; sourceTree = "<group>"; };
+		9F11CB8F228322514D8AB599 /* NativeApplicationLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeApplicationLibrary.swift; sourceTree = "<group>"; };
+		A07218FACCBBAA3AB28897D0 /* Watchdog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchdog.swift; sourceTree = "<group>"; };
+		A26707FAFADB1AA6E62F3622 /* QuitSessionLease.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitSessionLease.swift; sourceTree = "<group>"; };
+		A673E9E952EF0548B3822CCE /* DockResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockResize.swift; sourceTree = "<group>"; };
+		B136A84575CE3C986E5B516B /* DockerQuitControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockerQuitControl.swift; sourceTree = "<group>"; };
+		B1EA7D17FB7FBED14F8C85AF /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		B77E45EB0BD692230D1E2AFA /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
+		BDF17A8AE6C833CF10DB9767 /* Docker.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Docker.icns; sourceTree = "<group>"; };
+		C0EAD9FB8C058B3123260271 /* Applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applications.swift; sourceTree = "<group>"; };
+		C11F134694642251A50F614D /* NativeQuitControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeQuitControl.swift; sourceTree = "<group>"; };
+		C7B854C630D5D6A0EE95B0DE /* DockerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockerMain.swift; sourceTree = "<group>"; };
+		D318A723232C30256219195E /* DockBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockBadgeView.swift; sourceTree = "<group>"; };
+		D8E7309D979A0899B37E8D3F /* DockerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockerStore.swift; sourceTree = "<group>"; };
+		DC142B989AB2529E0E4B200A /* DockWindowBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockWindowBridge.swift; sourceTree = "<group>"; };
+		E526A00622211EC99FB43676 /* QuitControlIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitControlIntent.swift; sourceTree = "<group>"; };
+		F3160220CB3D994F941D2174 /* ThirdPartyNotices.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ThirdPartyNotices.txt; sourceTree = "<group>"; };
+		F9AD752A77E56227FCD38A8E /* StackListEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackListEditor.swift; sourceTree = "<group>"; };
+		FE5BA7B8438FEF4B20A6D1AC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		072896D05D9A5A7167ED64F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				620A2E31ED3D6A2F25B0B501 /* Docker.app */,
+				2DD2B870637A67043EB67204 /* DockerControlHost.app */,
+				6AE5FBA8425236A21355AA76 /* DockerControls.appex */,
+				60DC66C4A956756E751A5F24 /* DockerWatchdog */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11B75EA12CF628D489E126C8 /* Dock */ = {
+			isa = PBXGroup;
+			children = (
+				C0EAD9FB8C058B3123260271 /* Applications.swift */,
+				B1EA7D17FB7FBED14F8C85AF /* Configuration.swift */,
+				D318A723232C30256219195E /* DockBadgeView.swift */,
+				597218F16136360E734E576E /* DockContextMenu.swift */,
+				C7B854C630D5D6A0EE95B0DE /* DockerMain.swift */,
+				D8E7309D979A0899B37E8D3F /* DockerStore.swift */,
+				140B83BFDEB3705337BCAF14 /* DockerUI.swift */,
+				968E16EAB332BAE31D0F9604 /* DockNotificationBadges.swift */,
+				A673E9E952EF0548B3822CCE /* DockResize.swift */,
+				DC142B989AB2529E0E4B200A /* DockWindowBridge.swift */,
+				0FD3641377B7D02761A32358 /* DockWindowShortcut.swift */,
+				7178B3A6BD3B31AE33565F45 /* MenuCopyPage.swift */,
+				5C3B812DAA1AF255FDDDBD81 /* MenuCopyService.swift */,
+				9F11CB8F228322514D8AB599 /* NativeApplicationLibrary.swift */,
+				61CC7B326D198E9034425E44 /* NativeDockService.swift */,
+				C11F134694642251A50F614D /* NativeQuitControl.swift */,
+				43AF357BD8E4F9878AFC8D87 /* Preview.swift */,
+				13F1B407C91655320C895A80 /* QuitService.swift */,
+				A26707FAFADB1AA6E62F3622 /* QuitSessionLease.swift */,
+				F9AD752A77E56227FCD38A8E /* StackListEditor.swift */,
+				9816DBCDF50051B915836AFD /* Stacks.swift */,
+				73D7F00DA338790642FB833A /* TrashService.swift */,
+				6219F35194CBFC11E0833799 /* TrashState.swift */,
+			);
+			path = Dock;
+			sourceTree = "<group>";
+		};
+		34E43F618B6AC1D4FC55BA87 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				60909213C32CC4182E246CC7 /* DockLockCore */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		36EA50A751BC4DB87E2B6FEE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				77D6A8402EBA77A81C99AE58 /* CopiedApplicationMenu.swift */,
+				3E6BEFB66325078EC2BD4DA8 /* DirectoryEvents.swift */,
+				4FB9B52858FB37CDAB0542C5 /* NativeDockSession.swift */,
+				80B4084501A00ED3D0072A22 /* WindowIntent.swift */,
+				6C96CFD6A8F25C600709B2AE /* WindowProtocol.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		60909213C32CC4182E246CC7 /* DockLockCore */ = {
+			isa = PBXGroup;
+			children = (
+				902F2A1CFF8C8B6CB432B531 /* Basics.swift */,
+				B77E45EB0BD692230D1E2AFA /* Commands.swift */,
+				0BAD9EA93AB968D7E50A7172 /* DisplayLayout.swift */,
+				FE5BA7B8438FEF4B20A6D1AC /* Settings.swift */,
+				9B8BBEE707603CB06E825065 /* StatusReport.swift */,
+			);
+			path = DockLockCore;
+			sourceTree = "<group>";
+		};
+		683871A50E12D0414B08216E /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				B136A84575CE3C986E5B516B /* DockerQuitControl.swift */,
+				93779EF60F496AFF6C4FD30A /* QuitControlHost.swift */,
+				E526A00622211EC99FB43676 /* QuitControlIntent.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		737D2153D75BAA9774D6F5F0 /* Docker */ = {
+			isa = PBXGroup;
+			children = (
+				683871A50E12D0414B08216E /* Controls */,
+				11B75EA12CF628D489E126C8 /* Dock */,
+				A0A1C0A163F4175C766FD2A7 /* Resources */,
+				36EA50A751BC4DB87E2B6FEE /* Shared */,
+				34E43F618B6AC1D4FC55BA87 /* ThirdParty */,
+				C642AC5183C68324E7F66650 /* Watchdog */,
+			);
+			name = Docker;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A0A1C0A163F4175C766FD2A7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDF17A8AE6C833CF10DB9767 /* Docker.icns */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C642AC5183C68324E7F66650 /* Watchdog */ = {
+			isa = PBXGroup;
+			children = (
+				A07218FACCBBAA3AB28897D0 /* Watchdog.swift */,
+			);
+			path = Watchdog;
+			sourceTree = "<group>";
+		};
+		D3B73272841BA734DC554E00 = {
+			isa = PBXGroup;
+			children = (
+				F3160220CB3D994F941D2174 /* ThirdPartyNotices.txt */,
+				737D2153D75BAA9774D6F5F0 /* Docker */,
+				072896D05D9A5A7167ED64F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F45599C8282B8559C2A354D /* DockerControlHost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADE7E64F1CDCDF3E8496E06E /* Build configuration list for PBXNativeTarget "DockerControlHost" */;
+			buildPhases = (
+				742D4B8D99D4B57C9508CFAE /* Sources */,
+				DECE20228A26A8AF56EF8FD0 /* Resources */,
+				286D080DB4D21697307C15B4 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4A12F4E81E76F75DD189032 /* PBXTargetDependency */,
+			);
+			name = DockerControlHost;
+			packageProductDependencies = (
+			);
+			productName = DockerControlHost;
+			productReference = 2DD2B870637A67043EB67204 /* DockerControlHost.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6550F3EF538B7E42721D7E79 /* DockerWatchdog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11EF0BF974A76F27A3AEDA04 /* Build configuration list for PBXNativeTarget "DockerWatchdog" */;
+			buildPhases = (
+				009BF0B3D48396907AC56E47 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DockerWatchdog;
+			packageProductDependencies = (
+			);
+			productName = DockerWatchdog;
+			productReference = 60DC66C4A956756E751A5F24 /* DockerWatchdog */;
+			productType = "com.apple.product-type.tool";
+		};
+		C54A81B10BFE42615064FE0A /* Docker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA99F04872F319B566F90D97 /* Build configuration list for PBXNativeTarget "Docker" */;
+			buildPhases = (
+				0497E46EADC919A83E9E57C1 /* Sources */,
+				10B6BFC0BCBC6FAA491BA2E7 /* Resources */,
+				5378E176CC1380F025BD3DAD /* Preserve signed engines and window helper */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05C0382E93EE0D8820F77084 /* PBXTargetDependency */,
+				7D30EAD0D0C305C0158DB3B7 /* PBXTargetDependency */,
+			);
+			name = Docker;
+			packageProductDependencies = (
+			);
+			productName = Docker;
+			productReference = 620A2E31ED3D6A2F25B0B501 /* Docker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D3DFEE2700789BCB6E194534 /* DockerControls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 676CD8F3C097BDCE3F92E8C6 /* Build configuration list for PBXNativeTarget "DockerControls" */;
+			buildPhases = (
+				3923F5DFB82B6FAD113EA4A5 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DockerControls;
+			packageProductDependencies = (
+			);
+			productName = DockerControls;
+			productReference = 6AE5FBA8425236A21355AA76 /* DockerControls.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		176FA95F3474B99102AEDA81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0F45599C8282B8559C2A354D = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					6550F3EF538B7E42721D7E79 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					C54A81B10BFE42615064FE0A = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+					D3DFEE2700789BCB6E194534 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = C539277AE1A212DA97FEF6B1 /* Build configuration list for PBXProject "Docker" */;
+			developmentRegion = "zh-Hans";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = D3B73272841BA734DC554E00;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 072896D05D9A5A7167ED64F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C54A81B10BFE42615064FE0A /* Docker */,
+				0F45599C8282B8559C2A354D /* DockerControlHost */,
+				D3DFEE2700789BCB6E194534 /* DockerControls */,
+				6550F3EF538B7E42721D7E79 /* DockerWatchdog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10B6BFC0BCBC6FAA491BA2E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F8C8D532D331ABA261226E4 /* Docker.icns in Resources */,
+				6D21C81D9E2AFECACFC00798 /* ThirdPartyNotices.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DECE20228A26A8AF56EF8FD0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2ADB5AD46C76125FC8BE9B7 /* Docker.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5378E176CC1380F025BD3DAD /* Preserve signed engines and window helper */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Preserve signed engines and window helper";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -eu\ntask_source_root=\"${SRCROOT}/..\"\ntask_contents=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}\"\nmkdir -p \"${task_contents}/Helpers\" \"${task_contents}/Resources/WindowHelper\"\n/usr/bin/ditto \"${task_source_root}/Engines/DockLock.app\" \"${task_contents}/Helpers/DockLock.app\"\n/usr/bin/ditto \"${FORSYTH_WINDOW_HELPER}\" \"${task_contents}/Helpers/Dock 窗口助手.app\"\n/usr/bin/ditto \"${BUILT_PRODUCTS_DIR}/DockerControlHost.app\" \"${task_contents}/Helpers/DockerControlHost.app\"\n/usr/bin/ditto \"${BUILT_PRODUCTS_DIR}/DockerWatchdog\" \"${task_contents}/MacOS/DockerWatchdog\"\n/bin/cp \"${task_source_root}/WindowHelper/window-layout.js\" \"${task_contents}/Resources/WindowHelper/window-layout.js\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		009BF0B3D48396907AC56E47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F54AF71524F7EA5D014A6CAC /* Basics.swift in Sources */,
+				85EF8007190478780FFB87C9 /* Commands.swift in Sources */,
+				4197A8CFF5CEF73586DE63F6 /* DisplayLayout.swift in Sources */,
+				2CE2BD17E996B9CFD267AC9F /* NativeDockSession.swift in Sources */,
+				6FB367DA5D4B5F26F6C1741F /* Settings.swift in Sources */,
+				24FAEBF592B7D23880526F36 /* StatusReport.swift in Sources */,
+				70EC7AF8A1539A2844D7E65C /* Watchdog.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0497E46EADC919A83E9E57C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32BFFB66CAD2DC2472C3F2E8 /* Applications.swift in Sources */,
+				2FDFCBAF6961CF4EC76F86F9 /* Basics.swift in Sources */,
+				6E219C25968512FC4DFC7A6D /* Commands.swift in Sources */,
+				018EA3B17FD0B4F05F6C6F9E /* Configuration.swift in Sources */,
+				30BE696E78DD7AFAF12C5457 /* CopiedApplicationMenu.swift in Sources */,
+				D1C4AACE2EE556E4F787A306 /* DirectoryEvents.swift in Sources */,
+				3B4CB01ADF26728409CE697A /* DisplayLayout.swift in Sources */,
+				54C2BA641AA5A3BB562F713A /* DockBadgeView.swift in Sources */,
+				8E1DBA0F3C611F1EA6E2B0BE /* DockContextMenu.swift in Sources */,
+				55BCE7D546F5259B6E42DB33 /* DockNotificationBadges.swift in Sources */,
+				1EF8C68361354EBDC334B804 /* DockResize.swift in Sources */,
+				20EA5CAE616747458F9712E3 /* DockWindowBridge.swift in Sources */,
+				6C2F09B06AFF7DEFCB359402 /* DockWindowShortcut.swift in Sources */,
+				D859344AFC1463FD143B9368 /* DockerMain.swift in Sources */,
+				C1E2577D85F1C7C5F6C7D919 /* DockerStore.swift in Sources */,
+				DA60BA2C0BC816EB866EA822 /* DockerUI.swift in Sources */,
+				087CC6E40DF53AB620E4AF05 /* MenuCopyPage.swift in Sources */,
+				4EAD641D214886BA4F933385 /* MenuCopyService.swift in Sources */,
+				77986A6C92CE0AB84F7A1684 /* NativeApplicationLibrary.swift in Sources */,
+				B0CD693E728DAD69FCE17B40 /* NativeDockService.swift in Sources */,
+				5724D9491029C621CCB92C20 /* NativeDockSession.swift in Sources */,
+				EB9F101B562801FDD30CE5DE /* NativeQuitControl.swift in Sources */,
+				155A51F91C6B38293640412E /* Preview.swift in Sources */,
+				142F9973AD0AF7F8824495B0 /* QuitService.swift in Sources */,
+				20E3D19106006BF8D142175C /* QuitSessionLease.swift in Sources */,
+				E509749B9143CE353A68C759 /* Settings.swift in Sources */,
+				933BAAE3B06DDACC855AC3B9 /* StackListEditor.swift in Sources */,
+				69130D8CED6D1A26A236674B /* Stacks.swift in Sources */,
+				329DEA96AF90DDA2D881733C /* StatusReport.swift in Sources */,
+				10619CE4468156B99A9D4906 /* TrashService.swift in Sources */,
+				F29700F50740AC1723AF2CFD /* TrashState.swift in Sources */,
+				DDBBDFD29199F33F873BC723 /* WindowIntent.swift in Sources */,
+				171F59F9DD4626F09E7797B0 /* WindowProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3923F5DFB82B6FAD113EA4A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				476BFB9FC4999DD7B3A46B8E /* DockerQuitControl.swift in Sources */,
+				D04B356DE9439AAEC076C134 /* QuitControlIntent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		742D4B8D99D4B57C9508CFAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				712D58C0F4BBED94D83FFC50 /* Configuration.swift in Sources */,
+				E81C125C817EF1C63BD28FCB /* DockerStore.swift in Sources */,
+				DEB3D165D00C1463CA89C9CD /* QuitControlHost.swift in Sources */,
+				007A28F79FF24E5F3ABB469C /* QuitControlIntent.swift in Sources */,
+				807D0F21FB9929FD9A183A01 /* QuitService.swift in Sources */,
+				FF5C5BEE339F57FE08599BA2 /* QuitSessionLease.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05C0382E93EE0D8820F77084 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F45599C8282B8559C2A354D /* DockerControlHost */;
+			targetProxy = 76178320120B193751527D51 /* PBXContainerItemProxy */;
+		};
+		7D30EAD0D0C305C0158DB3B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6550F3EF538B7E42721D7E79 /* DockerWatchdog */;
+			targetProxy = 6D093D64A8D506099E0AF331 /* PBXContainerItemProxy */;
+		};
+		A4A12F4E81E76F75DD189032 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3DFEE2700789BCB6E194534 /* DockerControls */;
+			targetProxy = 0EDCD42AEFC20A8A113F219C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		364B37AF8646E5F1D058DE53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "$(FORSYTH_INPUT_DIR)/ControlHostInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FORSYTH_CONTROL_HOST_BUNDLE_ID)";
+				PRODUCT_NAME = DockerControlHost;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		40928E44D7D91D55D743756A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		431456494B1DAF7F2FEC6F13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "$(FORSYTH_INPUT_DIR)/MainInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FORSYTH_MAIN_BUNDLE_ID)";
+				PRODUCT_NAME = Docker;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		448EE42F5FFEBC328825D474 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_NAME = DockerWatchdog;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4ED13E6784B30B8C88D67A89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A082F620A49940E7B9BFB8FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "$(FORSYTH_INPUT_DIR)/MainInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FORSYTH_MAIN_BUNDLE_ID)";
+				PRODUCT_NAME = Docker;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AA90B285E6CDC3A60F729910 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = ../Controls/Entitlements.plist;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "$(FORSYTH_INPUT_DIR)/ControlsInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				OTHER_LDFLAGS = "$(inherited) -e _NSExtensionMain";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FORSYTH_CONTROLS_BUNDLE_ID)";
+				PRODUCT_NAME = DockerControls;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AB33A7C6988B5FAE70A3F2EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = ../Controls/Entitlements.plist;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "$(FORSYTH_INPUT_DIR)/ControlsInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				OTHER_LDFLAGS = "$(inherited) -e _NSExtensionMain";
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FORSYTH_CONTROLS_BUNDLE_ID)";
+				PRODUCT_NAME = DockerControls;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BF98EA8635D94A9E1AEB7E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_NAME = DockerWatchdog;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F43E339D00E51934DEC38940 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_APP_SANDBOX = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "$(FORSYTH_INPUT_DIR)/ControlHostInfo.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(FORSYTH_CONTROL_HOST_BUNDLE_ID)";
+				PRODUCT_NAME = DockerControlHost;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11EF0BF974A76F27A3AEDA04 /* Build configuration list for PBXNativeTarget "DockerWatchdog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				448EE42F5FFEBC328825D474 /* Debug */,
+				BF98EA8635D94A9E1AEB7E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		676CD8F3C097BDCE3F92E8C6 /* Build configuration list for PBXNativeTarget "DockerControls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB33A7C6988B5FAE70A3F2EC /* Debug */,
+				AA90B285E6CDC3A60F729910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		ADE7E64F1CDCDF3E8496E06E /* Build configuration list for PBXNativeTarget "DockerControlHost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F43E339D00E51934DEC38940 /* Debug */,
+				364B37AF8646E5F1D058DE53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C539277AE1A212DA97FEF6B1 /* Build configuration list for PBXProject "Docker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ED13E6784B30B8C88D67A89 /* Debug */,
+				40928E44D7D91D55D743756A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CA99F04872F319B566F90D97 /* Build configuration list for PBXNativeTarget "Docker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A082F620A49940E7B9BFB8FA /* Debug */,
+				431456494B1DAF7F2FEC6F13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 176FA95F3474B99102AEDA81 /* Project object */;
+}

@@ -1,0 +1,11 @@
+# Build products
+build/
+dist/
+dmg/
+DerivedData/
+.build/
+.swiftpm/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+release/

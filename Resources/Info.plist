@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleDevelopmentRegion</key><string>zh-Hans</string>
+<key>CFBundleDisplayName</key><string>Docker</string>
+<key>CFBundleName</key><string>Docker</string>
+<key>CFBundleExecutable</key><string>Docker</string>
+<key>CFBundleIdentifier</key><string>local.codex.native-dock-preview</string>
+<key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleShortVersionString</key><string>1.0.0</string>
+<key>CFBundleVersion</key><string>1001</string>
+<key>CFBundleIconFile</key><string>Docker.icns</string>
+<key>LSMinimumSystemVersion</key><string>26.0</string>
+<key>LSApplicationCategoryType</key><string>public.app-category.utilities</string>
+<key>NSPrincipalClass</key><string>NSApplication</string>
+<key>NSHighResolutionCapable</key><true/>
+<key>NSAppleEventsUsageDescription</key><string>在你确认清倒废纸篓后，Docker 需要调用访达的系统清倒命令。</string>
+<key>NSSupportsAutomaticTermination</key><false/>
+<key>NSSupportsSuddenTermination</key><false/>
+<key>NSHumanReadableCopyright</key><string>Copyright © 2026 Forsyth. DockLock engine © yihui-dev and contributors, MIT License.</string>
+<key>CFBundleURLTypes</key><array><dict><key>CFBundleURLName</key><string>ForsythDocker</string><key>CFBundleURLSchemes</key><array><string>forsythdocker</string></array></dict></array>
+</dict></plist>

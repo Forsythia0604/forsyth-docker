@@ -1,0 +1,129 @@
+name: Build
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    # Weekly, to catch breakage from new Xcode / macOS runner images.
+    - cron: "17 3 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  core-linux:
+    name: Core tests (Linux)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - name: Unit tests
+        run: swift test --package-path DockLockCore
+      - name: Localization check
+        run: python3 Scripts/check_localization.py
+
+  build:
+    name: Build & test (macOS)
+    runs-on: macos-15
+    timeout-minutes: 30
+    permissions:
+      contents: write # publish releases for v* tags
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+
+      - name: Core unit tests
+        run: swift test --package-path DockLockCore
+
+      - name: Build DockLock.app
+        id: build
+        if: ${{ !cancelled() }}
+        run: |
+          set -o pipefail
+          if ! xcodebuild -project DockLock.xcodeproj -scheme DockLock -configuration Release \
+                -derivedDataPath build -destination 'generic/platform=macOS' \
+                CODE_SIGN_IDENTITY=- CODE_SIGNING_REQUIRED=NO build > build.log 2>&1; then
+            echo "::group::Errors"
+            grep -E "error:|fatal" build.log | sort -u | head -150 || true
+            echo "::endgroup::"
+            tail -60 build.log
+            exit 1
+          fi
+          echo "::group::Warnings"
+          grep -E "warning:" build.log | grep -v "appintentsmetadataprocessor" | sort -u | head -150 || true
+          echo "::endgroup::"
+          ls -la build/Build/Products/Release/DockLock.app/Contents/MacOS
+
+      - name: Smoke test (CLI + running app)
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: |
+          APP=build/Build/Products/Release/DockLock.app
+          BIN="$APP/Contents/MacOS/DockLock"
+          "$BIN" --version
+          "$BIN" help | head -5
+          set +e
+          "$BIN" status; code=$?
+          set -e
+          test "$code" -eq 3   # not running yet
+          open -g "$APP"
+          for i in $(seq 1 30); do "$BIN" mode >/dev/null 2>&1 && break; sleep 1; done
+          "$BIN" status
+          "$BIN" displays
+          "$BIN" mode follows-mouse
+          test "$("$BIN" mode)" = "follows-mouse"
+          "$BIN" mode lock-selected
+          "$BIN" url "docklock://disableDockLock"
+          test "$("$BIN" mode)" = "disabled"
+          "$BIN" enable
+          "$BIN" status --json | head -20
+          defaults read dev.yihui.docklock settings.v1 >/dev/null
+          test -d "$APP/Contents/Resources/Metadata.appintents"
+          test -f "$APP/Contents/Resources/zh-Hans.lproj/Localizable.strings"
+          "$BIN" quit
+
+      - name: End-to-end test (virtual second display)
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: bash Tests/E2E/run_e2e.sh build/Build/Products/Release/DockLock.app
+
+      - uses: actions/upload-artifact@v7
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        with:
+          name: screenshots
+          path: screenshots/*.png
+          if-no-files-found: ignore
+
+      - name: Package
+        id: package
+        if: ${{ !cancelled() && steps.build.outcome == 'success' }}
+        run: |
+          APP=build/Build/Products/Release/DockLock.app
+          mkdir -p dist
+          ditto -c -k --keepParent "$APP" dist/DockLock.zip
+          mkdir -p dmg && cp -R "$APP" dmg/ && ln -s /Applications dmg/Applications
+          hdiutil create -volname DockLock -srcfolder dmg -ov -format UDZO dist/DockLock.dmg
+          (cd dist && shasum -a 256 DockLock.zip DockLock.dmg > SHA256SUMS.txt)
+          ls -la dist
+
+      - uses: actions/upload-artifact@v7
+        if: ${{ !cancelled() && steps.package.outcome == 'success' }}
+        with:
+          name: DockLock
+          path: dist/*
+
+      - name: Release
+        if: ${{ startsWith(github.ref, 'refs/tags/v') && steps.package.outcome == 'success' }}
+        uses: softprops/action-gh-release@v3
+        with:
+          files: dist/*
+          generate_release_notes: true

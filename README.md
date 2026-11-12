@@ -1,10 +1,10 @@
-# Docker · Forsyth
+# Docker Development Edition
 
 Docker is a native macOS app for organizing the Dock, grouping applications into stacks, keeping windows clear of the Dock, and quitting selected apps from Control Center. This repository preserves the project and its last local test build as a record of how it was made.
 
 ## Test build
 
-[Version 1.0.0, build 1012](https://github.com/Forsythia0604/forsyth-docker/releases/tag/v1.0.0-test.1012) contains the original app bundle. It targets Apple silicon Macs running macOS 26 or later. The bundle retains its development signature and was not notarized for public distribution. It runs locally and does not require an account.
+[Version 1.0.0, build 1012](https://github.com/Forsythia0604/Docker-Development-Edition/releases/tag/v1.0.0-test.1012) contains the original app bundle. It targets Apple silicon Macs running macOS 26 or later. The bundle retains its development signature and was not notarized for public distribution. It runs locally and does not require an account.
 
 Open the app to configure it. Closing the settings window leaves Docker running; use the Docker menu bar icon or Control–Option–Command–D to reopen settings. Quit Docker to return to the native Dock.
 
